@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+:root{
+    --addItemPadding: 2.5%;
+    --headPadding: 1.5%;
+    --listMargin: 1.5%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #2b2b2b;
+}
+
+#heading{
+    background-color: rgba(200, 223, 225, 0.2);
+}
+
+.container-head{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.heading{
+    padding-left: var(--headPadding);
+    display: flex;
+    flex-basis: 25%;
+    justify-content: start;
+    color: white;
+}
+
+.add-item{
+    display: flex;
+    flex-basis: calc(75% - var(--addItemPadding) - var(--headPadding));
+    justify-content: end;
+    padding-right: var(--addItemPadding);
+    padding-top: 1.5%;
+}
+
+.textField{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+    color: wheat;
+}
+
+.button{
+    border: 1px solid #fff1a9;
+    background-color: transparent;
+    color: antiquewhite;
+    width: auto;
+    border-radius: 10%;
+}
+
+.button:hover{
+    background-color: rgb(61, 63, 63);
+}
+
+.textField:focus{
+    border-bottom: 1px solid green;
+}
+
+.todo-list ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item{
+    background-color: #444343;
+    display: flex;
+    flex-direction: row;
+    margin: var(--listMargin);
+    flex-basis: calc(30% - var(--listMargin));
+    font-size: 2rem;
+    justify-content:space-evenly;
+    align-items: center;
+    height: 5rem;
+    color: #fff;
+}
+
+.del{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.btn-del{
+    background: transparent;
+    border: none;
+    margin-right: 10px;
+}
+
+.btn-del:focus{
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.btn-del:hover{
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.hd{
+    width: 25px;
+}
+
+.btn-upd{
+    background: transparent;
+    border: none;
+}
+
+.btn-upd:focus{
+    border: 1px solid yellow;
+    border-radius: 5px;
+}
+
+.btn-upd:hover{
+    border: 1px solid yellow;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1150px) {
+    .item{
+        flex-direction: column;
+        align-content: flex-start;
+    }
+    .hd{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .item{
+        margin-left: 0px;
+    }
+    .heading{
+        margin: 0px;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+    .container-head{
+        flex-direction: column;
+    }
+    .add-item{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .item{
+        flex-direction: column;
+        align-content: flex-start;
+        font-size: 20px;
+    }
+    .hd{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .item{
+        margin-left: 0px;
+    }
+}
