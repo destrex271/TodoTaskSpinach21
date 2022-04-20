@@ -8,15 +8,11 @@ console.log("Hello")
 btn.addEventListener("click",e=>{
     e.preventDefault()
     val = field.value
-    list.innerHTML += `<li class="item">
-    <div class="hd">${val}</div>
+    list.innerHTML += `<li class="item col-sm-4 col-md-4 col-lg-4 col-xl-4">
+    <div class="">${val}</div>
     <div class="del">
-        <button class="btn btn-del">
-            <i class="fa fa-trash" style="color:red;font-size:25px;" aria-hidden="true"></i>
-        </button>
-        <button class="btn btn-upd">
-            <i class="fa fa-plus " style="color:yellow;font-size:25px;" aria-hidden="true"></i>
-        </button>
+        <i class="fa fa-trash btn" style="color:red;font-size:25px;" aria-hidden="true"></i>
+        <i class="fa fa-plus btn" style="color:yellow;font-size:25px;" aria-hidden="true"></i>
     </div>
     </li>`
     field.value = ""
