@@ -8,17 +8,29 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #2b2b2b;
+    background-image: url("/assets/back.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    /* background-color: #2b2b2b; */
 }
 
 #heading{
     background-color: rgba(200, 223, 225, 0.2);
+    position: sticky !important;
+    top: -1px;
 }
 
 .container-head{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    
+}
+
+.stick{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 .heading{
@@ -68,7 +80,9 @@ body{
 }
 
 .item{
-    background-color: #444343;
+    /* background-color: #444343; */
+    background: url('https://images.pexels.com/photos/1655166/pexels-photo-1655166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center;
+    background-size: cover;
     /* display: flex; */
     /* flex-direction: row; */
     margin: var(--listMargin);
@@ -78,6 +92,7 @@ body{
     align-items: center;
     height: 5rem;
     color: #fff;
+    border-radius: 5px;
 }
 
 .del{
@@ -136,6 +151,7 @@ body{
     .item{
         margin-left: 0px;
         margin-right: 30px;
+        font-size: 3rem;
     }
     .heading{
         margin: 0px;
